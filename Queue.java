@@ -1,13 +1,22 @@
 public class Queue {
-   // your code is here
+ int[] array = new int[3];
+ int counter = 0;
+
     public void push(int pushedElement){
-       //your code is here
+     array[counter] = pushedElement;
+     counter++;
     }
     public void pop(){
-        //your code is here
+     for (int i = 0;i < 2;i++){
+      array[i] = array[i+1];
+     }
+     array[counter-1] = 0;
+     counter--;
     }
     public void display(){
-        //your code is here
+     for(int j = 0;j < counter;j++){
+      System.out.println(array[j]);
+     }
     }
 
 }
